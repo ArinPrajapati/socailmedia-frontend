@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { format } from "timeago.js";
-import Like from "../../components/Like";
-import Comment from "../../components/Comment";
 import PostComments from "../../components/PostComments";
-import { snapshot, useSnapshot } from "valtio";
+import { useSnapshot } from "valtio";
 import state from "../../helper/state";
 
 const Allpost = () => {

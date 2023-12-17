@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import CreatePost from "./CreatePost";
 import PostList from "./PostList";
 import state from "../../helper/state";
