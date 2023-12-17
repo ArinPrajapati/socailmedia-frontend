@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Cookies from "js-cookie";
 import axios from "axios";
 import { useSnapshot } from "valtio";
@@ -10,11 +10,14 @@ const Index = () => {
   const handleuser = async () => {
     const token = Cookies.get("token");
 
-    const response = await axios.get("http://localhost:4000/user/current", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    const response = await axios.get(
+      "https://socail-fiad.onrender.com/user/current",
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
 
     console.log(response.data);
     const data = response.data;
@@ -24,18 +27,10 @@ const Index = () => {
     localStorage.setItem("userid", data._id);
   };
 
-  const handleLogout = () => {
-    Cookies.remove("token");
-    localStorage.removeItem("username");
-    localStorage.removeItem("userid");
-    state.isAuth = false;
-    navigate("/login");
-  };
-
   useEffect(() => {
     const token = Cookies.get("token");
     if (!token) {
-      window.location.href = "/login";
+      navigate("/login");
     } else {
       try {
         handleuser();
@@ -56,13 +51,6 @@ const Index = () => {
           <h2 className="text-center text-lg font-semibold">
             {snap.username?.toUpperCase()}
           </h2>
-
-          <button
-            className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 ml-6 rounded"
-            onClick={handleLogout}
-          >
-            Logout
-          </button>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from "axios";
-import React from "react";
 import { useSnapshot } from "valtio";
 import state from "../helper/state";
 import toast from "react-hot-toast";
@@ -12,7 +12,7 @@ const Like = (postId: any) => {
     console.log(post);
     try {
       // Send a request to your server to like the post
-      await axios.put(`http://localhost:4000/post/like/${postId.postId}`, {
+      await axios.put(`https://socail-fiad.onrender.com/post/like/${postId.postId}`, {
         userId: snap.userid,
         userName: snap.username,
       });

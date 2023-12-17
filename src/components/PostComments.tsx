@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 
 const PostComments = (postId: any) => {
@@ -5,7 +6,7 @@ const PostComments = (postId: any) => {
   const [show, setShow] = React.useState(true);
   const getPostComments = async () => {
     const response = await fetch(
-      "http://localhost:4000/comment/cpost/" + postId.postId,
+      "https://socail-fiad.onrender.com/comment/cpost/" + postId.postId,
       {
         method: "GET",
         headers: {

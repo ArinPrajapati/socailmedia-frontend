@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { useSnapshot } from "valtio";
 import axios from "axios";
@@ -9,7 +10,7 @@ const Comment = (postId: any) => {
   const [comment, setComment] = React.useState("");
 
   const handleComment = async () => {
-    const res = await axios.post("http://localhost:4000/comment/create", {
+    const res = await axios.post("https://socail-fiad.onrender.com/comment/create", {
       username: snap.username,
       commentContent: comment,
       postId: postId.postId,
