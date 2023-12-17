@@ -92,11 +92,7 @@ const SideBar = () => {
             <small className="text-center text-xs font-medium">Post</small>
           </Link>
           <button
-            className={`flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-gray-700 ${
-              snap.at == "postpage"
-                ? "bg-indigo-600 text-white"
-                : "hover:bg-gray-100"
-            }`}
+            className={`flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-gray-700 hover:bg-gray-100 `}
           >
             <Logout />
             <small className="text-center text-xs font-medium">Logout</small>
