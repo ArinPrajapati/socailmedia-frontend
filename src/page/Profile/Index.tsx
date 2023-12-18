@@ -11,7 +11,7 @@ const Index = () => {
     const token = Cookies.get("token");
 
     const response = await axios.get(
-      "http://localhost:4000/user/current",
+      "https://socail-fiad.onrender.com/user/current",
       {
         headers: {
           Authorization: `Bearer ${token}`,
