@@ -13,7 +13,7 @@ const PostList = () => {
     // Fetch posts from the server
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("https://socail-fiad.onrender.com/post");
+        const response = await axios.get("https://localhost:4000/post");
         setPosts(response.data);
       } catch (error) {
         console.error("Error fetching posts:", error);

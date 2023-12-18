@@ -16,7 +16,7 @@ const ForgetPassword = () => {
     try {
       setLoading(true);
 
-      const response = await axios.post("https://socail-fiad.onrender.com/user/forgot-password", {
+      const response = await axios.post("https://localhost:4000/user/forgot-password", {
         email: email,
       })
       const data = await response.data;

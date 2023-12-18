@@ -25,7 +25,7 @@ const ResetPassword = () => {
 
       const token = window.location.pathname.split("/").pop();
       const response = await axios.post(
-        `https://socail-fiad.onrender.com/user/reset-password/${token}`,
+        `https://localhost:4000/user/reset-password/${token}`,
         { newPassword },
         {
           headers: {

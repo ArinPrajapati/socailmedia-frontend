@@ -6,7 +6,7 @@ const PostComments = (postId: any) => {
   const [show, setShow] = React.useState(true);
   const getPostComments = async () => {
     const response = await fetch(
-      "https://socail-fiad.onrender.com/comment/cpost/" + postId.postId,
+      "https://localhost:4000/comment/cpost/" + postId.postId,
       {
         method: "GET",
         headers: {

@@ -12,7 +12,7 @@ const Like = (postId: any) => {
     console.log(post);
     try {
       // Send a request to your server to like the post
-      await axios.put(`https://socail-fiad.onrender.com/post/like/${postId.postId}`, {
+      await axios.put(`https://localhost:4000/post/like/${postId.postId}`, {
         userId: snap.userid,
         userName: snap.username,
       });

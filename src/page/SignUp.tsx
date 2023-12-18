@@ -17,7 +17,7 @@ const SignUp = () => {
     try {
       // Make a POST request using Axios
       const response = await axios.post(
-        "https://socail-fiad.onrender.com/user/create",
+        "https://localhost:4000/user/create",
         formData
       );
 

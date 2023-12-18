@@ -17,7 +17,7 @@ const Allpost = () => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get(
-          "https://socail-fiad.onrender.com/post/user/" + snap.userid
+          "https://localhost:4000/post/user/" + snap.userid
         );
         setPosts(response.data);
       } catch (error) {
