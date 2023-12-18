@@ -35,7 +35,7 @@ const CreatePost = () => {
         const formData = new FormData();
         formData.append("file", img);
         const imageUploadResponse = await axios.post(
-          "https://localhost:4000/image/upload",
+          "http://localhost:4000/image/upload",
           formData
         );
         const imageUrl = imageUploadResponse.data.url;
@@ -49,7 +49,7 @@ const CreatePost = () => {
         setPost(updatedPost);
 
         // Sending user data to "http://localhost:3000/api/create"
-        const response = await axios.post("https://localhost:4000/post/create", {
+        const response = await axios.post("http://localhost:4000/post/create", {
           title: post.title,
           postMessage: post.postMessage,
           userId: post.userId,

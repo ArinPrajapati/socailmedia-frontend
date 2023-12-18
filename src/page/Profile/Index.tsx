@@ -11,7 +11,7 @@ const Index = () => {
     const token = Cookies.get("token");
 
     const response = await axios.get(
-      "https://localhost:4000/user/current",
+      "http://localhost:4000/user/current",
       {
         headers: {
           Authorization: `Bearer ${token}`,
